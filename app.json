@@ -108,3 +108,65 @@
       "required": true
 },
     "URL": {
+"description": "Change this image and input yours",
+      "value": "https://files.catbox.moe/sfk02i.jpg",
+      "required": true
+},
+    "AUTO_READ_MESSAGES": {
+      "description": "Type 'yes' to activate or 'no' to deactivate",
+      "value": "no",
+      "required": false
+},
+    "NUMERO_OWNER": {
+      "description": "Your phone number (exclude '+' and area code, e.g., '254114141192')",
+      "value": "254729269118",
+      "required": false
+},
+    "WARN_COUNT": {
+      "description": "Set the warning limit for warning commands",
+      "value": "10",
+      "required": false
+},
+    "STARTING_BOT_MESSAGE": {
+      "description": "Set 'yes' to display a starting bot message or 'no' to disable it",
+      "value": "yes",
+      "required": true
+},
+    "PRESENCE": {
+      "description": "Mark your presence: 1 for online, 2 for typing, 3 for recording, or leave blank for real state",
+      "value": "",
+      "required": false
+},
+    "ANTI_DELETE_MESSAGE": {
+      "description": "Enable anti-delete message (set 'yes' to activate or 'no' to deactivate)",
+      "value": "yes",
+      "required": false
+},
+    "ANTICALL": {
+      "description": "Automatically decline incoming calls (set 'on' to activate or 'off' to deactivate)",
+      "value": "yes",
+      "required": false
+},
+    "AUTO_BLOCK": {
+      "description": "Type 'yes' if you want the bot to automatically block those who insult you in your DM",
+      "value": "yes",
+      "required": false
+},
+    "AUTO_REACTION": {
+      "description": "Set 'yes' to enable bot reactions to messages in private chats",
+      "value": "no",
+      "required": false
+}
+},
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "standard-2x"
+}
+},
+  "addons": [
+    {
+      "plan": "heroku-postgresql:essential-0"
+}
+  ]
+}
