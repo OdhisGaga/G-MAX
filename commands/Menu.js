@@ -221,15 +221,15 @@ const getContextInfo = (title = '', userJid = '', thumbnailUrl = '') => ({
     forwardingScore: 999,
     isForwarded: true,
     forwardedNewsletterMessageInfo: {
-        newsletterJid: "120363249464136503@newsletter",
-        newsletterName: " ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʙᴇʟᴛᴀʜ ᴛᴇᴄʜ",
+        newsletterJid: "120363334654402961@newsletter",
+        newsletterName: "> Regard to Gaga",
         serverMessageId: Math.floor(100000 + Math.random() * 900000),
     },
     externalAdReply: {
         showAdAttribution: true,
         title:  `${toFancyUppercaseFont(greeting)} ${nomAuteurMessage}`,
         body: `${randomQuote}`,
-        thumbnailUrl: thumbnailUrl || 'https://telegra.ph/file/dcce2ddee6cc7597c859a.jpg',
+        thumbnailUrl: thumbnailUrl || 'https://files.catbox.moe/sfk02i.jpg',
         sourceUrl: (typeof settings !== "undefined" && settings.GURL) ? settings.GURL : '',
         mediaType: 1,
         renderLargerThumbnail: false
@@ -248,7 +248,7 @@ const getContextInfo = (title = '', userJid = '', thumbnailUrl = '') => ({
 ┃▸ 𝗨𝗽𝘁𝗶𝗺𝗲: ${uptime}
 ┗──────────────⊷
 
-© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʙᴇʟᴛᴀʜ ᴛᴇᴄʜ\n${readmore}
+© Gaga\n${readmore}
 ┏──◇ *𝗖𝗔𝗧𝗘𝗚𝗢𝗥𝗜𝗘𝗦* ◇───⊷
 ┃「 𝗥𝗲𝗽𝗹𝘆 𝘄𝗶𝘁𝗵 𝗻𝘂𝗺𝗯𝗲𝗿𝘀 𝗯𝗲𝗹𝗼𝘄 」
 ${categoryCommands.map((cat, index) => `> │◦➛ ${index + 1}. ${toFancyUppercaseFont(cat.name)}`).join("\n")}
@@ -291,7 +291,7 @@ ${categoryCommands.map((cat, index) => `> │◦➛ ${index + 1}. ${toFancyUpper
         }, { quoted: ms });*/
 
         // Send completion reaction
-        await zk.sendMessage(dest, { react: { text: '✅', key: ms.key } });
+        await zk.sendMessage(dest, { react: { text: '🌀', key: ms.key } });
 
         // Handler for user responses
         const replyHandler = async (update) => {
@@ -336,8 +336,8 @@ ${categoryCommands.map((cat, index) => `> │◦➛ ${index + 1}. ${toFancyUpper
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: "120363276287415739@newsletter",
-                        newsletterName: "BELTAH-MD BOT",
+                        newsletterJid: "120363334654402961@newsletter",
+                        newsletterName: "G-MAX BOT",
                         serverMessageId: Math.floor(100000 + Math.random() * 900000),
                     },
                     contextInfo: {
@@ -354,7 +354,7 @@ ${categoryCommands.map((cat, index) => `> │◦➛ ${index + 1}. ${toFancyUpper
                     }
                 }, { quoted: message });
 
-                await zk.sendMessage(dest, { react: { text: '✅', key: message.key } });
+                await zk.sendMessage(dest, { react: { text: '🌀', key: message.key } });
 
                 // Update active session
                 activeMenus.set(userId, {
