@@ -1,25 +1,25 @@
 {
-  "name": "BELTAH-MD",
+  "name": "G-MAX",
   "version": "2.0.0",
   "description": "",
-  "main": "beltahinfo.js",
+  "main": "richgaga.js",
   "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "s": "node beltahinfo.js",
-    "start": "node beltahinfo.js",
-    "beltahinc": "node beltahinfo.js",
+    "s": "node richgaga.js",
+    "start": "node Beltah-Md.js",
+    "beltahinc": "node richgaga.js",
     "c": "tsc"
   },
   "keywords": [
     "bot",
     "Baileys",
-    "Beltah-Md",
+    "G-MAX",
     "whatsapp",
     "whatsapp-bot",
-    "Beltah_render"
+    "Gaga_render"
   ],
-  "author": "Beltah Tech 254",
+  "author": "OdhisGaga",
   "license": "ISC",
   "dependencies": {
     "@adiwajshing/keyed-db": "^0.2.4",
@@ -155,4 +155,5 @@
     "youtubedl-core": "^4.11.7"
   }
   }
+
 
