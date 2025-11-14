@@ -1,4 +1,4 @@
-requiredBoT-MDBoT-MD  "name": "G-MAX"
+ "name": "G-MAX"
   "description": "G-MAX BOT",
   "keywords": [
     "bot",
@@ -169,5 +169,6 @@ requiredBoT-MDBoT-MD  "name": "G-MAX"
     }
   ]
 }
+
 
 
