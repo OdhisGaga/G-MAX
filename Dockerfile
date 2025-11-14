@@ -21,7 +21,7 @@ COPY package.json package-lock.json./
 RUN npm ci
 
 # Copy the rest of your application code
-COPY..
+COPY ..
 
 # Expose port (adjust if your app uses a different one)
 EXPOSE 3000
