@@ -1,5 +1,4 @@
-{
-  "name": "G-MAX"
+requiredBoT-MDBoT-MD  "name": "G-MAX"
   "description": "G-MAX BOT",
   "keywords": [
     "bot",
@@ -74,7 +73,7 @@
     },
     "BOT_NAME": {
       "description": "Change this if you don't like my name",
-      "G-BoT-MD",
+      "value",: "Gaga"
       "required": true 
     },
     "GROUP_CONTROL": {
@@ -170,4 +169,5 @@
     }
   ]
 }
+
 
