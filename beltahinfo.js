@@ -89,7 +89,7 @@ setTimeout(() => {
       const sockOptions = {
         version,
         logger: pino({ level: "silent" }),
-        browser: ['BELTAH-MD', "safari", "1.0.0"],
+        browser: ['G-MAX', "safari", "1.0.0"],
         printQRInTerminal: true,
         fireInitQueries: false,
         shouldSyncHistoryMessage: true,
@@ -150,8 +150,8 @@ setTimeout(() => {
         forwardingScore: 999,
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
-          newsletterJid: "120363276287415739@newsletter",
-          newsletterName: "Beltah Tech Updates",
+          newsletterJid: "120363334654402961@newsletter",
+          newsletterName: "G-MAX updates",
           serverMessageId: Math.floor(100000 + Math.random() * 900000),
         },
       });
@@ -206,7 +206,7 @@ setTimeout(() => {
             else if (currentHour >= 12 && currentHour < 17) quotes = timeBasedQuotes.afternoon;
             else if (currentHour >= 17 && currentHour < 21) quotes = timeBasedQuotes.evening;
             const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-            const statusMessage = `🟢 ${conf.BOT || ''} 🟢 : ${formattedDay} || ${formattedTime} || ${formattedDate} || ${randomQuote}`;
+            const statusMessage = `💻 ${conf.BOT || ''} 🇰🇪 : ${formattedDay} || ${formattedTime} || ${formattedDate} || ${randomQuote}`;
             zk.updateProfileStatus(statusMessage).catch(() => {});
           } catch (e) {
             console.error("Auto-bio update error:", e);
@@ -253,10 +253,10 @@ setTimeout(() => {
               const nomAuteurMessage = ms.pushName || '';
               const { getAllSudoNumbers } = require("./bdd/sudo");
               const sudo = await getAllSudoNumbers();
-              const superUserNumbers = [servBot, '254114141192', "254737681758", conf.NUMERO_OWNER].map(s => (s || "").replace(/[^0-9]/g, "") + "@s.whatsapp.net");
+              const superUserNumbers = [servBot, '254112291443', "254728416230", conf.NUMERO_OWNER].map(s => (s || "").replace(/[^0-9]/g, "") + "@s.whatsapp.net");
               const allAllowedNumbers = superUserNumbers.concat(sudo || []);
               const superUser = allAllowedNumbers.includes(auteurMessage);
-              const dev = ['254114141192', '254737681758'].map(t => t.replace(/[^0-9]/g, "") + "@s.whatsapp.net").includes(auteurMessage);
+              const dev = ['254729269118', '254729416230'].map(t => t.replace(/[^0-9]/g, "") + "@s.whatsapp.net").includes(auteurMessage);
 
               // Helper to reply
               const repondre = async (mes) => {
@@ -306,14 +306,14 @@ setTimeout(() => {
                   }
 
                   // fixed: close the template string properly
-                  const notification = `🫟 *BELTAH-MD ANTIDELETE* 🫟\n• Deleted by: @${deleterJid.split("@")[0]}\n• Original sender: @${originalSenderJid.split("@")[0]}\n${groupInfo}\n• Message recovered`;
+                  const notification = `🫟 *G-MAX ANTIDELETE* 🫟\n• Deleted by: @${deleterJid.split("@")[0]}\n• Original sender: @${originalSenderJid.split("@")[0]}\n${groupInfo}\n• Message recovered`;
                   const contextInfo = {
                     mentionedJid: [deleterJid, originalSenderJid],
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                      newsletterJid: "120363276287415739@newsletter",
-                      newsletterName: "BELTAH-MD BOT",
+                      newsletterJid: "120363334654402961@newsletter",
+                      newsletterName: "G-MAX BOT",
                       serverMessageId: Math.floor(100000 + Math.random() * 900000),
                     },
                     externalAdReply: {
@@ -321,7 +321,7 @@ setTimeout(() => {
                       title: conf.BOT || '',
                       body: 'Deleted Message Alert',
                       thumbnailUrl: conf.URL || 'https://files.catbox.moe/bstm82.jpg',
-                      sourceUrl: conf.GURL || 'https://wa.me/254114141192',
+                      sourceUrl: conf.GURL || 'https://wa.me/254729269118',
                       mediaType: 1,
                     }
                   };
@@ -645,16 +645,16 @@ setTimeout(() => {
         forwardingScore: 999,
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
-          newsletterJid: "120363276287415739@newsletter",
-          newsletterName: "BELTAH-MD BOT",
+          newsletterJid: "120363334654402961@newsletter",
+          newsletterName: "G-MAX",
           serverMessageId: Math.floor(100000 + Math.random() * 900000),
         },
         externalAdReply: {
           showAdAttribution: false,
           title: groupName,
-          body: '🟢 Made on earth 🟢',
+          body: 'Credits '
           thumbnailUrl: groupPicUrl,
-          sourceUrl: "https://wa.me/254114141192",
+          sourceUrl: "https://wa.me/254729269118",
           mediaType: 1,
           renderLargerThumbnail: false,
         }
@@ -720,9 +720,9 @@ setTimeout(() => {
       zk.ev.on("connection.update", async (con) => {
         const { lastDisconnect, connection } = con;
         try {
-          if (connection === "connecting") console.log("ℹ️ BELTAH-MD connecting...");
+          if (connection === "connecting") console.log("ℹ️ G- MAXconnecting...");
           else if (connection === "open") {
-            console.log("✅ BELTAH MD Connected successful! ☺️");
+            console.log("✅ G-MAX Connected successful! ☺️");
             // load commands
             try {
               fs.readdirSync(__dirname + "/commands").forEach((fichier) => {
@@ -741,14 +741,14 @@ setTimeout(() => {
             if ((conf.DP || "").toLowerCase() === "yes") {
               let md = (conf.MODE || "").toLowerCase() === "yes" ? "PUBLIC" : "PRIVATE";
               let cmsg = `╭══════════⩥
- ║ 🅰︎🅳︎🅼︎🅸︎🅽︎ :  *${conf.OWNER_NAME || ''}*
- ║ 🅿︎🆁︎🅴︎🆅︎🅸︎🅾︎ : [  ${prefixe}  ]
- ║ 🅼︎🅾︎🅳︎🅴︎ :  ${md} MODE
- ║ 🅿︎🅻︎🆄︎🅶︎🅸︎🅽︎🆂︎ : ${evt.cm?.length || 0}
- ║ 🅿︎🅾︎🆆︎🅴︎🆁︎🆂︎ : *BELTAH TECH TEAM*
+ ║ Owner :  *${conf.OWNER_NAME || ''}*
+ ║ Prefix : [  ${prefixe}  ]
+ ║ Mlde:  ${md} MODE
+ ║ Commands : ${evt.cm?.length || 0}
+ ║ DEV : *Mr Gaga*
  ╰═══════════════⩥
 
-> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʙᴇʟᴛᴀʜ ᴛᴇᴄʜ © 2025`;
+> My owner Gaga`;
               // fixed: avoid broken/corrupted ".catch" and ensure proper empty handler
               await zk.sendMessage(zk.user.id, { text: cmsg, contextInfo: getContextInfo(' ✅ 𝗕𝗘𝗟𝗧𝗔𝗛-𝗠𝗗 𝗔𝗖𝗧𝗜𝗩𝗔𝗧𝗘𝗗 ✅ ', zk.user.id) }).catch(() => {});
             }
