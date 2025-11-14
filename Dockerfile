@@ -1,8 +1,7 @@
-
 # Use the official Node.js LTS Buster image as base
 FROM node:lts-buster
 
-# Set working directory
+# Set working directory (optional, but common practice)
 WORKDIR /app
 
 # Update package sources to use the Debian archive (Buster repositories have moved)
@@ -11,21 +10,21 @@ RUN sed -i 's|http://deb.debian.org/debian|http://archive.debian.org/debian|g' /
  && apt-get -o Acquire::Check-Valid-Until=false update \
  && apt-get -o Acquire::Check-Valid-Until=false install -y ffmpeg imagemagick webp \
  && apt-get -o Acquire::Check-Valid-Until=false upgrade -y \
- && npm install --global pm2 \
+ && npm i pm2 -g \
  && rm -rf /var/lib/apt/lists/*
 
-# Copy package.json and package-lock.json for dependency installation
-COPY package.json package-lock.json./
+# Copy package.json and package-lock.json first (for better caching)
+COPY package.json ./
 
 # Install app dependencies
-RUN npm ci
+RUN npm install
 
 # Copy the rest of your application code
-COPY ..
+COPY . .
 
-# Expose port (adjust if your app uses a different one)
+# Expose port (replace 3000 with your app's port if different)
 EXPOSE 3000
 
-# Start the app using pm2-runtime
+# Start the app using pm2-runtime (recommended for Docker)
+# Replace "ecosystem.config.js" with your actual PM2 config or entry point file if needed
 CMD ["pm2-runtime", "start", "richgaga.js"]
-```
