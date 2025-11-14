@@ -73,7 +73,7 @@
     },
     "BOT_NAME": {
       "description": "Change this if you don't like my name",
-      "value",: "Gaga"
+      "value",: "Gaga",
       "required": true 
     },
     "GROUP_CONTROL": {
@@ -169,6 +169,7 @@
     }
   ]
 }
+
 
 
 
