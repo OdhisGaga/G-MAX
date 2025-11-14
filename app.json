@@ -1,5 +1,5 @@
 {
-"name": "G-MAX"
+"name": "G-MAX",
   "description": "G-MAX BOT",
   "keywords": [
     "bot",
@@ -170,6 +170,7 @@
     }
   ]
 }
+
 
 
 
