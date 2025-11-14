@@ -27,4 +27,4 @@ EXPOSE 3000
 
 # Start the app using pm2-runtime (recommended for Docker)
 # Replace "ecosystem.config.js" with your actual PM2 config or entry point file if needed
-CMD ["pm2-runtime", "start", "beltahinfo.js"]
+CMD ["pm2-runtime", "start", "richgaga.js"]
